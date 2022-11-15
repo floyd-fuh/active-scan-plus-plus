@@ -721,7 +721,7 @@ class Log4j(IScannerCheck):
         interactions = collab.fetchAllCollaboratorInteractions()
         if interactions:
             return [CustomScanIssue(attack.getHttpService(), helpers.analyzeRequest(attack).getUrl(), [attack],
-                                    'Log4Shell (CVE-2021-44228)',
+                                    'Log4j (CVE-2021-44228)',
                                     "The application appears to be running a version of log4j vulnerable to RCE. ActiveScan++ sent a reference to an external file, and received a pingback from the server.<br/><br/>" +
                                     "To investigate, use the manual collaborator client. It may be possible to escalate this vulnerability into RCE. Please refer to https://www.lunasec.io/docs/blog/log4j-zero-day/ for further information",
                                     'Firm', 'High')]
